@@ -1,3 +1,4 @@
+let tempText = 'this';
 const KEY_WIDTH = 50;
 const SPACE_BAR_WIDTH = KEY_WIDTH * 3 + 20;
 let keys = [
@@ -23,8 +24,15 @@ function setup() {
 }
 
 function draw() {
+    textSize(30);
     background(255);
     drawKeyboard();
+if (mouseIsOver() && mouseClicked) {
+
+}
+
+    textSize(20);
+    text(tempText, 100, 100, width / 2, height / 2);
 }
 
 /**
@@ -39,4 +47,12 @@ function drawKeyboard() {
         }
         text(k.name, k.x, k.y, KEY_WIDTH, KEY_WIDTH);
     }
+}
+
+function mouseIsOver() {
+for (let i = 0; i < keys.length; i++) {
+    
+}
+if (mouseX === keys[i], mouseY === keys[i])
+    return true
 }
